@@ -10,7 +10,7 @@ const axios = require('axios');
 const todoRoute=require('./routes/urlRoute')
 const app=express()
 
-mongoose.connect('mongodb://127.0.0.1:27017/todo');
+mongoose.connect(process.env.MONGO_URL);
 
 const connection = mongoose.connection;
 
