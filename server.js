@@ -32,19 +32,8 @@ app.use(cors());
 app.use(require("./routes/urlRoute"))
 app.use(require("./routes/url"))
 
-app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "http://localhost:3000"); // update to match the domain you will make the request from
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  next();
-});
-
-// app.use(function(req, res, next) {
-//   res.header("Access-Control-Allow-Origin", "*");
-//   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-//   next();
-// });
-
-app.listen(3000,(req,res)=>{
+const PORT =process.env.PORT
+app.listen(PORT,(req,res)=>{
   // res.setHeader("Access-Control-Allow-Origin", "*");
     console.log('server listening on port 3000');
 })
