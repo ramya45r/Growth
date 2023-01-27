@@ -32,8 +32,9 @@ app.use(cors());
 app.use(require("./routes/urlRoute"))
 app.use(require("./routes/url"))
 
-const PORT =process.env.PORT
-app.listen(PORT,(req,res)=>{
+
+
+app.listen(3000,(req,res)=>{
   // res.setHeader("Access-Control-Allow-Origin", "*");
     console.log('server listening on port 3000');
 })
